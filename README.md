@@ -4,8 +4,8 @@ Este proyecto automatiza la creación de 4 páginas web utilizando Apache2 en un
 
 ## Requisitos
 
-- Sistema operativo: Linux (Debian, Ubuntu o derivado)
-- Apache2 instalado (el script lo instalará si no está presente)
+- Sistema operativo: Linux 
+- Apache2 instalado (el script lo instalará si no está )
 
 ## Estructura del Proyecto
 
@@ -13,6 +13,7 @@ Este proyecto automatiza la creación de 4 páginas web utilizando Apache2 en un
 - `/var/www/html/pagina2`: Carpeta con la página 2 (puerto 8082)
 - `/var/www/html/pagina3`: Carpeta con la página 3 (puerto 8083)
 - `/var/www/html/pagina4`: Carpeta con la página 4 (puerto 8084)
+  
 - `/etc/apache2/sites-available/pagina1.conf`: Archivo de configuración para la página 1
 - `/etc/apache2/sites-available/pagina2.conf`: Archivo de configuración para la página 2
 - `/etc/apache2/sites-available/pagina3.conf`: Archivo de configuración para la página 3
@@ -35,34 +36,60 @@ Sigue los siguientes pasos para instalar y configurar el proyecto:
    ```
 3. **Ejecutar el script:
 
-Ejecuta el script como root o utilizando *sudo* para realizar la configuración:**
+Ejecuta el script como root o utilizando `sudo` para realizar la configuración:**
 
    ```bash
    sudo ./configurar_paginas_web.sh
    ```
 El script realizará lo siguiente:
 
-Instalación de Apache2 (si no está instalado)
-- Creación de 4 directorios en */var/www/html*
-- Creación de archivos *index.html* en cada directorio
+Instalación de Apache2
+- Creación de 4 directorios en `/var/www/html`
+- Creación de archivos `index.html` en cada directorio
 - Configuración de virtual hosts para cada página en puertos diferentes (8081, 8082, 8083, 8084)
-- Modificación del archivo *ports.conf* de Apache2 para escuchar en los nuevos puertos
+- Modificación del archivo `ports.conf` de Apache2 para escuchar en los nuevos puertos
 - Reinicio del servicio Apache2
 
-3. **Uso:
-   Una vez finalizada la ejecución del script, puedes acceder a las páginas web desde tu navegador web, utilizando los siguientes enlaces:**
+## Uso:
+Una vez finalizada la ejecución del script, puedes acceder a las páginas web desde tu navegador web, utilizando los siguientes enlaces:
   - Página 1 - Puerto 8081
   - Página 2 - Puerto 8082
   - Página 3 - Puerto 8083
   - Página 4 - Puerto 8084
-Si estás accediendo desde otra máquina, reemplaza *localhost* con la dirección IP del servidor.
+Si estás accediendo desde otra máquina, reemplaza `localhost` con la dirección IP del servidor.
 
-4. **Personalización
-Puedes personalizar las páginas web editando los archivos index.html en las carpetas correspondientes:**
+## Personalización
+Puedes personalizar las páginas web editando los archivos index.html en las carpetas correspondientes:
 
    ```bash
     /var/www/html/pagina1/index.html
     /var/www/html/pagina2/index.html
     /var/www/html/pagina3/index.html
     /var/www/html/pagina4/index.html
+   ```
+
+## Problemas frecuentes
+- Apache2 no arranca después de modificar `ports.conf`: Verifica que los puertos no estén siendo utilizados por otros servicios. Puedes revisar esto con el comando:
+- 
+   ```bash
+   sudo netstat -tuln | grep 808
+   ```
+- Permisos de archivos: Asegúrate de que los directorios y archivos en `/var/www/html` tengan los permisos correctos:
+   ```bash
+   sudo chown -R www-data:www-data /var/www/html/
+   sudo chmod -R 755 /var/www/html/
+   ```
+
+Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+### Instrucciones de uso:
+
+1. **Guarda el archivo como `README.md`** en la carpeta raíz de tu proyecto.
+2. **Sube el archivo al repositorio** si estás utilizando Git:
+
+   ```bash
+   git add README.md
+   git commit -m "Añadir archivo README.md"
+   git push origin main
    ```
