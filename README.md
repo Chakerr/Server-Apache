@@ -26,8 +26,8 @@ Sigue los siguientes pasos para instalar y configurar el proyecto:
 1. **Clonar el repositorio (si lo tienes en GitHub):**
 
    ```bash
-   git clone <URL_DE_TU_REPOSITORIO>
-   cd <NOMBRE_DEL_REPOSITORIO>
+   git clone https://github.com/Chakerr/Server-Apache.git
+   cd Server-Apache
    ```
 2. **Otorgar permisos de ejecución al script:**
 
