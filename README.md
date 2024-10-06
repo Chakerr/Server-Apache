@@ -1,6 +1,6 @@
 # Proyecto: Configuración Automática de Páginas Web con Apache2
 
-Este proyecto automatiza la creación de 4 páginas web utilizando Apache2 en un servidor Linux. Cada página web será accesible a través de un puerto diferente. El script `configurar_paginas_web.sh` se encarga de realizar la configuración completa del entorno, incluyendo la creación de directorios, configuración de virtual hosts y apertura de puertos en Apache2.
+Este proyecto automatiza la creación de 4 páginas web utilizando Apache2 en un servidor Linux. Cada página web será accesible a través de un puerto diferente. El script `scriptApache.sh` se encarga de realizar la configuración completa del entorno, incluyendo la creación de directorios, configuración de virtual hosts y apertura de puertos en Apache2.
 
 ## Requisitos
 
