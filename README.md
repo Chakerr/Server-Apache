@@ -32,14 +32,14 @@ Sigue los siguientes pasos para instalar y configurar el proyecto:
 2. **Otorgar permisos de ejecución al script:**
 
    ```bash
-   chmod +x configurar_paginas_web.sh
+   chmod +x scriptApache.sh
    ```
 3. **Ejecutar el script:
 
 Ejecuta el script como root o utilizando `sudo` para realizar la configuración:**
 
    ```bash
-   sudo ./configurar_paginas_web.sh
+   sudo ./scriptApache.sh
    ```
 El script realizará lo siguiente:
 
@@ -82,14 +82,3 @@ Puedes personalizar las páginas web editando los archivos index.html en las car
 
 Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-### Instrucciones de uso:
-
-1. **Guarda el archivo como `README.md`** en la carpeta raíz de tu proyecto.
-2. **Sube el archivo al repositorio** si estás utilizando Git:
-
-   ```bash
-   git add README.md
-   git commit -m "Añadir archivo README.md"
-   git push origin main
-   ```
